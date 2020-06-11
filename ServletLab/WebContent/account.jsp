@@ -58,7 +58,7 @@
       </form>
      </div>
     <hr>
-    <a href="/bmi.jsp">Visit BMI!</a>
+    <a href="bmi.jsp">Visit BMI!</a>
     <footer>
     <p>&copy;2017 Company,Inc</p>
     </footer>

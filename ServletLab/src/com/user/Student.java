@@ -43,6 +43,10 @@ public class Student {
 //	return gpa;
 //}
 	
+	public void setGpa(double gpa) {
+		this.gpa = gpa;
+	}
+	
 	public String getSchoolName() {
 		return schoolName;
 	}
@@ -56,9 +60,7 @@ public class Student {
 		this.password = password;
 	}
 
-	public void setGpa(double gpa) {
-		this.gpa = gpa;
-	}
+
 	public Address getAddress() {
 		return address;
 	}

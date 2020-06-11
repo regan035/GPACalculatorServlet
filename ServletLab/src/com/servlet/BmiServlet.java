@@ -35,7 +35,7 @@ public class BmiServlet extends HttpServlet {
 		String height = request.getParameter("height");
 		String weight = request.getParameter("weight");	
 		
-		double bmi = (Double.parseDouble(height)*.025)*(Double.parseDouble(height)*.025)/(Double.parseDouble(weight)*.45);
+		double bmi = (Double.parseDouble(weight)*.45)/(Double.parseDouble(height)*.025)*(Double.parseDouble(height)*.025);
 		
 		HttpSession session = request.getSession(true);
 		Student student = (Student)session.getAttribute("student");

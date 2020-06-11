@@ -42,11 +42,11 @@
       <h2>Enter Height</h2>
       <form action="BmiServlet" method=post>
       	<div class = "form-group">
-      		<lable for="height">Height</lable>
-      		<input type = "text" class="form-control" name="hight" id="hight" placeholder="Height">
+      		<label for="height">Height</lable>
+      		<input type = "text" class="form-control" name="height" id="height" placeholder="Height">
       	</div>
       	<div class = "form-group">
-      		<lable for="weight">Weight</lable>
+      		<label for="weight">Weight</lable>
       		<input type = "text" class="form-control" name="weight" id="weight" placeholder="Weight">
       	</div>
 
