@@ -131,7 +131,7 @@ display: none!important;
     <td><c:out value="${course.professor}"/></td>
     <td><c:out value="${course.roomNumber}"/></td>
     <td><c:out value="${course.time}"/></td>
-    <td><c:out value="${course.occurence}"/></td>
+    <td><c:out value="${course.occurences}"/></td>
   </tr>	 
 </c:forEach>
     

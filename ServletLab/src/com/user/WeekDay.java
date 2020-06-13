@@ -1,5 +1,5 @@
 package com.user;
 
 public enum WeekDay {
-	Monday,Tuesday,Wednesday,Thursday,Friday
+	MONDAY,TUESDAY,WEDNESDAU,THURSDAY,FRIDAY
 }

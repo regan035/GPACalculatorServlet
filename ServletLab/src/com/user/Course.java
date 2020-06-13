@@ -44,7 +44,7 @@ public class Course {
 		return startDate;
 	}
 	public void setStartDate(String startDate) {
-
+		this.startDate = startDate;
 	
 	
 }
