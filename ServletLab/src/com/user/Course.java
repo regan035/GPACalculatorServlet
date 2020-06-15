@@ -7,6 +7,7 @@ public class Course {
 	private String time;
 	private String roomNumber;
 	private String startDate;
+	private double tuition;
 	public Course() {
 		super();
 	}
@@ -48,4 +49,10 @@ public class Course {
 	
 	
 }
+	public double getTuition() {
+		return tuition;
+	}
+	public void setTuition(double tuition) {
+		this.tuition = tuition;
+	}
 }

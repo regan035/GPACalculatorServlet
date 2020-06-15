@@ -123,15 +123,22 @@ display: none!important;
     <th>Room Number </th>
     <th>Time </th>
     <th>Week Day </th>
+   
   </tr>
-	<c:forEach var="course" items="${courses}">  
+  
+	<c:forEach var="course" items="${courses}">  	
   <tr>
     <td><c:out value="${course.courseName}"/></td>
     <td><c:out value="${course.startDate}"/></td>
     <td><c:out value="${course.professor}"/></td>
     <td><c:out value="${course.roomNumber}"/></td>
     <td><c:out value="${course.time}"/></td>
-    <td><c:out value="${course.occurences}"/></td>
+    <td>
+    <c:forEach var="occurence" items= "${course.occurences}">
+    <c:out value="${occurence}"/>
+    </c:forEach>
+    </td>
+    <td><button>Drop</button></td>
   </tr>	 
 </c:forEach>
     
