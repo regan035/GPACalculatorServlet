@@ -107,6 +107,17 @@ display: none!important;
 </div>
  <br>
     <p>Date: <input type="date" id="datepicker" name="startDate"></p>
+    
+       Credit Hours
+       <select class="form-control" name = "creditHours">
+      <option value="1">1</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+     <option value="5">5</option>
+      
+    </select>
+    <br>   
+    
     <button type="submit">add course</button>
     </form>
       </div>
@@ -123,25 +134,32 @@ display: none!important;
     <th>Room Number </th>
     <th>Time </th>
     <th>Week Day </th>
+    <th>Tuition Fee </th>
+    
    
   </tr>
   
-	<c:forEach var="course" items="${courses}">  	
+  
+  
+	<c:forEach var="course" items="${courses}" varStatus="myIndex">  	
   <tr>
     <td><c:out value="${course.courseName}"/></td>
     <td><c:out value="${course.startDate}"/></td>
     <td><c:out value="${course.professor}"/></td>
     <td><c:out value="${course.roomNumber}"/></td>
     <td><c:out value="${course.time}"/></td>
+    
     <td>
     <c:forEach var="occurence" items= "${course.occurences}">
     <c:out value="${occurence}"/>
+
     </c:forEach>
     </td>
-    <td><button>Drop</button></td>
+   	<td><c:out value="${course.tuition}"/></td>
+    <td><a href="DropServlet?course=${myIndex.index}">D</a></td>
   </tr>	 
 </c:forEach>
-    
+    <tr>Total tuition: <c:out value="${total}"/></tr>
   </table>
 </c:if>
 </div>

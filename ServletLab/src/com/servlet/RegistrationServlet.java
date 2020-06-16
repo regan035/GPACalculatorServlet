@@ -49,6 +49,7 @@ public class RegistrationServlet extends HttpServlet {
 		student.setSchoolName("Claim Academy");
 		
 		
+		
 		Address address = new Address();
 		address.setStreet(request.getParameter("street"));
 		address.setCity(request.getParameter("city"));

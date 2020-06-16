@@ -53,12 +53,22 @@ public class SchedulerServlet extends HttpServlet {
 			days[i]=WeekDay.valueOf(weekdays[i]);
 		}
 		
+		Double creditHour = Double.parseDouble(request.getParameter("creditHours"));
+		
+		double tuitionFee= (creditHour*850)*(1.04225);
+		
 		course.setCourseName(request.getParameter("courseName"));
 		course.setProfessor(request.getParameter("professor"));
 		course.setOccurences(days);
 		course.setRoomNumber(request.getParameter("roomNumber"));
 		course.setStartDate(request.getParameter("startDate"));
 		course.setTime(request.getParameter("time"));
+		course.setCreditHour(creditHour);
+		
+		
+	
+		
+		course.setTuition(tuitionFee);
 		
 		HttpSession session = request.getSession(true);
 		ArrayList<Course>courses= (ArrayList<Course>)session.getAttribute("courses");
@@ -67,6 +77,14 @@ public class SchedulerServlet extends HttpServlet {
 		}
 		
 		courses.add(course);
+		
+		double total=0;
+		for(int i=0;i<courses.size();i++) {
+			total +=courses.get(i).getTuition();
+		}
+		session.setAttribute("total", total);
+		
+		
 		
 		session.setAttribute("courses", courses);
 		

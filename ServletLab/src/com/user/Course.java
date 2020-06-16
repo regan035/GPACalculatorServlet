@@ -8,6 +8,9 @@ public class Course {
 	private String roomNumber;
 	private String startDate;
 	private double tuition;
+	private double creditHour;
+	
+	
 	public Course() {
 		super();
 	}
@@ -46,8 +49,7 @@ public class Course {
 	}
 	public void setStartDate(String startDate) {
 		this.startDate = startDate;
-	
-	
+
 }
 	public double getTuition() {
 		return tuition;
@@ -55,4 +57,11 @@ public class Course {
 	public void setTuition(double tuition) {
 		this.tuition = tuition;
 	}
+	public double getCreditHour() {
+		return creditHour;
+	}
+	public void setCreditHour(double creditHour) {
+		this.creditHour = creditHour;
+	}
+	
 }
